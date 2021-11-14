@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Colocar em português -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        /* CSS3 */
+        body{
+            background: rgb(16, 14, 138);
+            color: rgb(255, 255, 255);
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1> <!-- Título -->
+    <!-- Primeiro parágrafo então é 0-->
+    <p>Aqui vai o resultado</p> <!-- Parágrafo -->
+    <!-- Segundo parágrafo então é 1-->
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript</p> <!-- Strong deixa em negrito -->
+    <!-- <div>Clique em mim!</div> --> <!-- Parte do tagName -->
+    <div id='msg'>Clique em mim!</div> <!--  Parte do id -->
+    <script>
+        //SELECIONAR POR tagName*
+        /*
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        window.document.write(p1.innerText)//<--Texto que esta no páragrafo
+        corpo.style.background = 'black' //<-- Muda corpo para preto
+        p1.style.color = 'red'//<-- Muda o 2º parágrafo para vermelho
+        document.write(pi.innerText)//<--Pega o texto sem o strong ou outro detalhe
+        document.write(pi.innerHTML)//<--Pega o cod completo
+        */
+
+        //SELECIONAR POR id
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green' //<--Linha msg fica verde
+        d.innerText = 'Estou aguardando...' //<--Modifica a linha
+        */
+        
+        //PARTE DO SELETOR
+        // OBS: class = . | id = #
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+    </script>
+</body>
+</html>
